@@ -1,6 +1,6 @@
+import React from 'react';
 import SearchBar from './components/search-bar';
 import SearchResult from './components/search-result';
-import React from 'react';
 
 class PageSearchResult extends React.Component {
 
