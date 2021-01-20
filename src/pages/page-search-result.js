@@ -1,11 +1,13 @@
 import React from 'react';
-import SearchBar from './components/search-bar';
-import SearchResult from './components/search-result';
+import SearchBar from '../components/search-bar';
+import SearchResult from '../components/search-result';
 
 class PageSearchResult extends React.Component {
 
-  state = {
-    busqueda: ''
+  state = {};
+
+  componentWillMount() {
+    console.log('antes del metodo render');
   }
 
   changeHandle = e => {

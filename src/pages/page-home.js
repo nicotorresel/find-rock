@@ -1,6 +1,6 @@
 import React from 'react';
 import './page-home.css';
-import logo from './logo.svg';
+import logo from '../logo.svg';
 
 class PageHome extends React.Component {
   render() {

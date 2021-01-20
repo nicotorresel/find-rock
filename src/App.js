@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import PageSearchResult from './page-search-result';
-import PageArtist from './page-artist'
-import PageHome from './page-home';
+import PageSearchResult from './pages/page-search-result';
+import PageArtist from './pages/page-artist'
+import PageHome from './pages/page-home';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Layout from './components/layout';
 

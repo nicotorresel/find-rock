@@ -1,6 +1,6 @@
 import React from 'react';
-import SearchBar from './components/search-bar';
-import SimilarArtist from './components/similar-artist';
+import SearchBar from '../components/search-bar';
+import SimilarArtist from '../components/similar-artist';
 import './page-artist.css';
 
 class PageSearchResult extends React.Component {

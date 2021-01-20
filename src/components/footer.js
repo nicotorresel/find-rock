@@ -5,7 +5,7 @@ const Footer = () => {
     <React.Fragment>
       <div className="row">
         <div className="col-md-12 centrar">
-          <p>Todos los derechos reservados 2021</p>
+          <p>Todos los derechos reservados 2021 | @nicotorresel</p>
         </div>
       </div>
     </React.Fragment>
