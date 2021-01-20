@@ -6,7 +6,7 @@ class PageHome extends React.Component {
   render() {
     return (
       <div className="container">
-        <div className="row" className="centrado">
+        <div className="row centrado">
           <div className="col-md-6" >
             <div className="centrar">
             <img src={logo} alt="logo" id="logo" />

@@ -1,4 +1,3 @@
-import ArtistCard from './artist-card';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 
