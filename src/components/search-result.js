@@ -61,6 +61,7 @@ class SearchResult extends React.Component{
                 />
               )
             })}
+    
           </div>
         </div>
       </React.Fragment>
