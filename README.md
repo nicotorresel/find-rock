@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## URL OF THE PROJECT
+## URL of the project
 
 https://find-rock.netlify.app
 
