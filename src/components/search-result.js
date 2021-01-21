@@ -1,12 +1,14 @@
 import React from 'react';
 import ArtistCard from './/artist-card';
 import Loading from './loading';
+import Error from './error';
 import 'bootstrap/dist/css/bootstrap.css';
 
 class SearchResult extends React.Component{
 
   state = {
     loading: false,
+    error: null,
     data: {
       similarartists: {
         artist:[]
@@ -14,9 +16,10 @@ class SearchResult extends React.Component{
     }
   };
 
-  componentDidMount() {
+  componentWillReceiveProps(e){
+    let termino = e.busqueda;
     this.fetchData(
-      'http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=madona&api_key=65bd337131a93bd0f0550b29526413ef&format=json'
+      `http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=${termino}&api_key=65bd337131a93bd0f0550b29526413ef&format=json`
     );
   }
 
@@ -27,17 +30,26 @@ class SearchResult extends React.Component{
 
     const response = await fetch(url);
     const data = await response.json();
-    console.log(data, 'lo que trae la api');
-    this.setState({
-      loading: false,
-      data: data
-    });
+    if (data.error){
+      this.setState({
+        loading: false,
+        error: true,
+        errorMensaje: data.message
+      });
+    } else {
+      this.setState({
+        error: false,
+        loading: false,
+        data: data
+      });
+    }
   };
 
   render() {
     return (
       <React.Fragment>
         {this.state.loading && <Loading />}
+        {this.state.error && < Error errorMensaje={this.state.errorMensaje}/>}
         <div className="container">
           <div className="row">
             {this.state.data.similarartists.artist.map((artista, i)=>{

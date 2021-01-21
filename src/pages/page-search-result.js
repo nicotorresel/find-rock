@@ -5,14 +5,18 @@ import SearchResult from '../components/search-result';
 class PageSearchResult extends React.Component {
 
   state = {};
-
-  componentWillMount() {
-    console.log('antes del metodo render');
-  }
-
-  changeHandle = e => {
+  componentDidMount() {
+    let search = this.props.history.location.search.substr(1);
     this.setState({
-      [e.target.name]: e.target.value
+      busqueda: search
+    })
+  };
+
+  componentWillMount() {}
+
+  handleChange = e => {
+    this.setState({
+      busqueda: e.target.value
     });
   };
 
@@ -20,7 +24,7 @@ class PageSearchResult extends React.Component {
     return (
       <React.Fragment>
         <SearchBar 
-          onChange={this.changeHandle} 
+          onChange={this.handleChange} 
           busqueda={this.state.busqueda}
         />
         <SearchResult busqueda={this.state.busqueda}/>

@@ -14,11 +14,6 @@ class SearchBar extends React.Component {
   //   console.log("Soy el input: ", e.target.value);
   // }
 
-  handleSubmit = e => {
-    e.preventDefault();
-    console.log("holaa")
-  }
-
   render(){
     return(
       <React.Fragment>
