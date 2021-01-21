@@ -61,7 +61,6 @@ class SearchResult extends React.Component{
                 />
               )
             })}
-            <h1>{this.props.busqueda}</h1> 
           </div>
         </div>
       </React.Fragment>
