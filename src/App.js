@@ -14,6 +14,7 @@ function App() {
         <Switch>
           <Route exact path="/busqueda" component={PageSearchResult}/>
           <Route exact path="/artista" component={PageArtist} />
+          <Route exact path="/nicotorresel" render={() => (window.location = "https://github.com/nicotorresel")} />
           <Route path="/" component={PageHome}/>
         </Switch>
       </Layout>
