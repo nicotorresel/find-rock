@@ -1,7 +1,7 @@
 import React from 'react';
 import './page-home.css';
 import logo from '../logo.svg';
-import {Link} from 'react-router-dom';
+
 
 class PageHome extends React.Component {
 
@@ -13,7 +13,15 @@ class PageHome extends React.Component {
     this.setState({
       busqueda: e.target.value
     });
-  }
+  };
+
+  handleClick = (e) => {
+    e.preventDefault();
+    window.open(
+      'https://www.linkedin.com/in/nicolas-torresel-1b612015b/',
+      '_blank'
+    )
+  };
 
   state = {
     busqueda: ''
@@ -40,7 +48,7 @@ class PageHome extends React.Component {
               </div>
               <div className="actions">
                 <button className="btng" type="submit">Search Similar Artist</button>
-                <button className="btng">Nicolas Torresel</button>
+                <button className="btng" onClick={this.handleClick}>Nicolas Torresel</button>
               </div>
             </form>
           </div>
